@@ -1,0 +1,164 @@
+---
+description: Событийное условие; срабатывает при нажатии клавиши на объекте или форме.
+---
+
+# KeyDownCondition
+
+## Шаблон KeyDownCondition <a href="#template_key_down_condition" id="template_key_down_condition"></a>
+
+```xml
+<Condition Name="" Type="KeyDownCondition" Assembly="Conditions">
+  <!--Тэги, общие для всех условий-->
+  <AlwaysChange Value="" />
+  <!--Тэги, специфичные для KeyDownCondition-->
+  <Object Name="" />
+  <ExceptObjects>
+    <Object Name="" />
+  </ExceptObjects>
+  <Key Control="" Shift="" Alt="" Value="" />
+  <ControlKey></ControlKey>
+  <ShiftKey></ShiftKey>
+  <AltKey></AltKey>
+  <Key1></Key1>
+  <Key2></Key2>
+  <Handle></Handle>
+</Condition>
+```
+
+## Описание KeyDownCondition <a href="#description_key_down_condition" id="description_key_down_condition"></a>
+
+```xml
+<Condition Name="KeyDownConditionName" Type="KeyDownCondition" Assembly="Conditions">
+  <!--Тэги, общие для всех условий-->
+  <!--Тэги, специфичные для KeyDownCondition-->
+</Condition>
+```
+
+## Тэги, специфичные для KeyDownCondition <a href="#tags_key_down_condition" id="tags_key_down_condition"></a>
+
+### Object <a href="#object" id="object"></a>
+
+[Объект](../../objects/), на котором срабатывает событие нажатия клавиши.
+
+Необязательный тэг. Значение тэга `<Object>`: не ожидается.
+
+Если тэг `<Object>` отсутствует, то событие срабатывает для формы.
+
+```xml
+<Object Name="ObjectName" />
+```
+
+#### Атрибуты тэга `<Object>` <a href="#attributes_tag_object" id="attributes_tag_object"></a>
+
+<table data-header-hidden><thead><tr><th width="150" align="center"></th><th width="502.3333333333333"></th></tr></thead><tbody><tr><td align="center">Name</td><td><p>Название объекта.</p><p></p><p>Обязательный атрибут. Ожидается название одного из объектов, описанных в форме.</p></td></tr></tbody></table>
+
+### ExceptObjects <a href="#except_objects" id="except_objects"></a>
+
+Список [объектов](../../objects/) формы, нажатие клавиш в которых не вызывает срабатывание события.
+
+Необязательный тэг. Значение тэга `<ExceptObjects>`: список тэгов [`<Object>`](key_down_condition.md#except_objects_object).
+
+При наличии тэга [`<Object>`](key_down_condition.md#object) тэг `<ExceptObjects>` игнорируется.
+
+```xml
+<ExceptObjects>
+  <Object Name="ObjectName1" />
+  <Object Name="ObjectName2" />
+</ExceptObjects>
+```
+
+#### Тэг `<Object>` <a href="#except_objects_object" id="except_objects_object"></a>
+
+[Объект](../../objects/) формы, нажатие клавиши в котором не будет вызывать событие.
+
+Необязательный тэг. Значение тэга `<Object>`: не ожидается.
+
+#### Атрибуты тэга `<Object>` <a href="#attributes_tag_except_objects_object" id="attributes_tag_except_objects_object"></a>
+
+<table data-header-hidden><thead><tr><th width="150" align="center"></th><th width="502.3333333333333"></th></tr></thead><tbody><tr><td align="center">Name</td><td><p>Название объекта.</p><p></p><p>Обязательный атрибут. Ожидается название одного из объектов, описанных в форме.</p></td></tr></tbody></table>
+
+### Key <a href="#key" id="key"></a>
+
+Описание нажатой клавиши.
+
+Необязательный тэг. Значение тэга `<Key>`: не ожидается.
+
+Если тэг `<Key>` отсутствует, то наличие тэгов [`<Key1>`](key_down_condition.md#key1) и/или [`<Key2>`](key_down_condition.md#key2) обязательно.
+
+```xml
+<Key Control="False" Shift="False" Alt="False" Value="Enter" />
+```
+
+#### Атрибуты тэга `<Key>` <a href="#attributes_tag_key" id="attributes_tag_key"></a>
+
+<table data-header-hidden><thead><tr><th width="150" align="center"></th><th width="502.3333333333333"></th></tr></thead><tbody><tr><td align="center">Control</td><td><p>Признак нажатия клавиши Control совместно с нажатой клавишей.</p><p></p><p>Необязательный атрибут. Ожидается логическое значение.<br><br>По умолчанию значение считается неопределенным.</p></td></tr><tr><td align="center">Shift</td><td><p>Признак нажатия клавиши Shift совместно с нажатой клавишей.</p><p></p><p>Необязательный атрибут. Ожидается логическое значение.<br><br>По умолчанию значение считается неопределенным.</p></td></tr><tr><td align="center">Alt</td><td><p>Признак нажатия клавиши Alt совместно с нажатой клавишей.</p><p></p><p>Необязательный атрибут. Ожидается логическое значение.<br><br>По умолчанию значение считается неопределенным.</p></td></tr><tr><td align="center">Value</td><td>Нажатая клавиша.<br><br>Обязательный атрибут. Ожидается название одной из клавиш (например, "Enter", "Escape", "F1" и т. д.).</td></tr></tbody></table>
+
+### ControlKey <a href="#control_key" id="control_key"></a>
+
+Признак, определяющий, будет ли проверяться нажатие клавиши Control при нажатии на клавиши, указанные в тэгах [`<Key1>`](key_down_condition.md#key1) и [`<Key2>`](key_down_condition.md#key2).
+
+Необязательный тэг. Ожидается логическое значение.
+
+Если тэг `<ControlKey>` отсутствует, то значение считается неопределенным.
+
+```xml
+<ControlKey>True</ControlKey>
+```
+
+### ShiftKey <a href="#shift_key" id="shift_key"></a>
+
+Признак, определяющий, будет ли проверяться нажатие клавиши Shift при нажатии на клавиши, указанные в тэгах [`<Key1>`](key_down_condition.md#key1) и [`<Key2>`](key_down_condition.md#key2).
+
+Необязательный тэг. Ожидается логическое значение.
+
+Если тэг `<ShiftKey>` отсутствует, то значение считается неопределенным.
+
+```xml
+<ShiftKey>True</ShiftKey>
+```
+
+### AltKey <a href="#alt_key" id="alt_key"></a>
+
+Признак, определяющий, будет ли проверяться нажатие клавиши Alt при нажатии на клавиши, указанные в тэгах [`<Key1>`](key_down_condition.md#key1) и [`<Key2>`](key_down_condition.md#key2).
+
+Необязательный тэг. Ожидается логическое значение.
+
+Если тэг `<AltKey>` отсутствует, то значение считается неопределенным.
+
+```xml
+<AltKey>True</AltKey>
+```
+
+### Key1 <a href="#key1" id="key1"></a>
+
+Первая нажатая клавиша (работает в сочетании с нажатием клавиши, указанной в тэге [`<Key2>`](key_down_condition.md#key2)).
+
+Необязательный тэг. Ожидается название одной из клавиш (например, "Enter", "Escape", "F1" и т. д.).
+
+Если тэг `<Key1>` отсутствует, то наличие тэгов [`<Key>`](key_down_condition.md#key) или [`<Key2>`](key_down_condition.md#key2) обязательно.
+
+```xml
+<Key1>Enter</Key1>
+```
+
+### Key2 <a href="#key2" id="key2"></a>
+
+Вторая нажатая клавиша (работает в сочетании с нажатием клавиши, указанной в тэге [`<Key1>`](key_down_condition.md#key1)).
+
+Необязательный тэг. Ожидается название одной из клавиш (например, "Enter", "Escape", "F1" и т. д.).
+
+```xml
+<Key2>Escape</Key2>
+```
+
+### Handle <a href="#handle" id="handle"></a>
+
+Признак, определяющий, будет ли передаваться дальше на объекты управление после обработки данного условия нажатие клавиши.
+
+Необязательный тэг. Ожидается логическое значение.
+
+Если тэг `<Handle>` отсутствует, то используется значение True.
+
+```xml
+<Handle>True</Handle>
+```
