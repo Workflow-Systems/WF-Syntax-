@@ -30,6 +30,7 @@ description: >-
   <!--Тэги, специфичные для CheckedComboBox-->
   <DropDownHeight></DropDownHeight>
   <DropDownWidth></DropDownWidth>
+  <ScrollWithWheel></ScrollWithWheel>
   <InputLanguage></InputLanguage>
   <InputCase></InputCase>
   <SearchMode Value="" />
@@ -115,6 +116,18 @@ description: >-
 
 ```xml
 <DropDownWidth>200</DropDownWidth>
+```
+
+### ScrollWithWheel <a href="#scroll_with_wheel" id="scroll_with_wheel"></a>
+
+Признак, включающий или отключающий возможность изменять значение колесиком мышки.
+
+Необязательный тэг. Ожидается логическое значение.
+
+По умолчанию используется значение True.
+
+```xml
+<ScrollWithWheel>False</ScrollWithWheel>
 ```
 
 ### InputLanguage <a href="#input_language" id="input_language"></a>

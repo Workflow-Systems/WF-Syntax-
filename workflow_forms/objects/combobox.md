@@ -28,6 +28,7 @@ description: Графический объект; поле с выпадающи
   <!--Тэги, специфичные для ComboBox-->
   <EnterText></EnterText>
   <MaxLength></MaxLength>
+  <ScrollWithWheel></ScrollWithWheel>
   <AutoCompleteMode></AutoCompleteMode>
   <AutoCompleteSource></AutoCompleteSource>
   <Sorted></Sorted>
@@ -118,6 +119,18 @@ description: Графический объект; поле с выпадающи
 
 ```xml
 <MaxLength>0</MaxLength>
+```
+
+### ScrollWithWheel <a href="#scroll_with_wheel" id="scroll_with_wheel"></a>
+
+Признак, включающий или отключающий возможность изменять значение колесиком мышки.
+
+Необязательный тэг. Ожидается логическое значение.
+
+По умолчанию используется значение True.
+
+```xml
+<ScrollWithWheel>False</ScrollWithWheel>
 ```
 
 ### AutoCompleteMode <a href="#auto_complete_mode" id="auto_complete_mode"></a>
