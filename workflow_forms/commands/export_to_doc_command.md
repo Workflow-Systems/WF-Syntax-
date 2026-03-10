@@ -91,17 +91,14 @@ description: >-
 
 Признак, определяющий, будет ли выполнение команды происходить в асинхронном режиме (в фоновом потоке).
 
-Необязательный тэг. Значение тэга `<Async>`: не ожидается.
+Необязательный тэг. Значение тэга не ожидается.\
+Обязательный атрибут `Value` ожидает логическое значение
 
-Если тэг `<Async>` отсутствует, то для атрибута `Value` используется значение False.
+По умолчанию используется значение False.
 
 ```xml
 <Async Value="False" />
 ```
-
-#### Атрибуты тэга `<Async>` <a href="#attributes_tag_async" id="attributes_tag_async"></a>
-
-<table data-header-hidden><thead><tr><th align="center"></th><th width="454.3333333333333"></th></tr></thead><tbody><tr><td align="center">Value</td><td><p>Значение.</p><p></p><p>Обязательный атрибут. Ожидается логическое значение.</p></td></tr></tbody></table>
 
 ### TemplateFileName <a href="#template_file_name" id="template_file_name"></a>
 

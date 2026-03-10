@@ -56,6 +56,8 @@
   * [UploadFileCommand](workflow_forms/commands/upload_file_command.md)
   * [ValueSetCommand](workflow_forms/commands/value_set_command.md)
   * [OverlayIconSetCommand](workflow_forms/commands/overlay_icon_set_command.md)
+  * [GetServerUrlCommand](workflow_forms/commands/get_server_url_command.md)
+  * [GetCloudBackupInfoCommand](workflow_forms/commands/get_cloud_backup_info_command.md)
 * [Conditions](workflow_forms/conditions/README.md)
   * [EventCondition](workflow_forms/conditions/event_condition/README.md)
     * [BeforeChangeCondition](workflow_forms/conditions/event_condition/before_change_condition.md)
