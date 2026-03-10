@@ -30,6 +30,8 @@ description: >-
   <!--Тэги, специфичные для RadioButtonBlock-->
   <Appearance></Appearance>
   <FlatCheckedBackColor></FlatCheckedBackColor>
+  <FlatMouseDownBackColor></FlatMouseDownBackColor>
+  <FlatMouseOverBackColor></FlatMouseOverBackColor>
   <Options>
     <Option Name="">
       <Top></Top>
@@ -142,6 +144,30 @@ description: >-
 
 ```xml
 <FlatCheckedBackColor>LightGreen</FlatCheckedBackColor>
+```
+
+### FlatMouseDownBackColor <a href="#flat_mouse_down_back_color" id="flat_mouse_down_back_color"></a>
+
+Задает цвет нажатия на переключатель.
+
+Необязательный тег. Ожидается имя одного из цветов, описанных на форме или описание цвета в формате HTML (#rrggbb).
+
+По умолчанию используется цвет, определенный в настройках Windows.
+
+```xml
+<FlatMouseDownBackColor>NavyBlue</FlatMouseDownBackColor>
+```
+
+### FlatMouseOverBackColor <a href="#flat_mouse_over_back_color" id="flat_mouse_over_back_color"></a>
+
+Задает цвет переключателя при наведения курсора мыши.
+
+Необязательный тег. Ожидается имя одного из цветов, описанных на форме или описание цвета в формате HTML (#rrggbb).
+
+По умолчанию используется цвет, определенный в настройках Windows.
+
+```xml
+<FlatMouseOverBackColor>#FFFFFF</FlatMouseOverBackColor>
 ```
 
 ## Get-проперти для получения свойств <a href="#get-properties" id="get-properties"></a>
